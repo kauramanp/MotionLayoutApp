@@ -11,10 +11,12 @@
     app:layoutDescription="@xml/activity_main_scene">
 
     <View
-        android:id="@+id/tv"
+        android:id="@+id/view1"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="#ff0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:text="Hello World!"/>
 
     <View
@@ -24,4 +26,13 @@
         android:background="@color/black"
         android:text="Button" />
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 </androidx.constraintlayout.motion.widget.MotionLayout>
