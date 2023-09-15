@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blue"
+    tools:context=".MotionLayoutActivity"
+    app:layoutDescription="@xml/activity_motion_layout_scene">
+    <include layout="@layout/layout_common"/>
+
+    <ImageView
+        android:id="@+id/ivCloud"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_cloud"
+        app:layout_constraintDimensionRatio="2:2"
+        app:layout_constraintEnd_toEndOf="@+id/v_90"
+        app:layout_constraintStart_toStartOf="@+id/v_40"
+        app:layout_constraintTop_toTopOf="@+id/h_20" />
+
+    <ImageView
+        android:id="@+id/ivAndroid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_android"
+        app:layout_constraintBottom_toBottomOf="@+id/h_80"
+        app:layout_constraintDimensionRatio="2:2"
+        app:layout_constraintEnd_toEndOf="@+id/v_90"
+        app:layout_constraintStart_toStartOf="@+id/v_10" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-10dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/v_90"
+        app:layout_constraintStart_toStartOf="@+id/v_10"
+        app:layout_constraintTop_toTopOf="@+id/h_80">
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/ivLeaf1"
+        android:src="@drawable/ic_leaf_1"
+        android:scaleType="fitXY"
+        android:rotation=".60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/ivLeaf2"
+        android:src="@drawable/ic_leaf_2"
+        android:scaleType="fitXY"
+        android:rotation=".60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/ivCloud" />
+        <Constraint android:id="@+id/ivAndroid" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/h_80"
+            app:layout_constraintDimensionRatio="2:2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/ivAndroid" />
+        <Constraint
+            app:layout_constraintEnd_toEndOf="@+id/v_90"
+            app:layout_constraintStart_toStartOf="@+id/v_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="-10dp"
+            app:layout_constraintTop_toTopOf="@+id/h_80"
+            android:id="@+id/cv" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/ivCloud"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="2:2"
+            app:layout_constraintStart_toStartOf="@+id/v_10"
+            app:layout_constraintEnd_toEndOf="@+id/v_40"
+            app:layout_constraintTop_toTopOf="@+id/h_10"/>
+        <Constraint
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/ivAndroid"
+            android:src="@drawable/ic_android"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="2:2"
+            app:layout_constraintTop_toTopOf="@+id/h_20"
+            app:layout_constraintStart_toStartOf="@+id/v_40"
+            app:layout_constraintEnd_toEndOf="@+id/v_90"/>
+        <Constraint
+            app:layout_constraintEnd_toEndOf="@+id/v_90"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/v_10"
+            android:id="@+id/cv"
+            app:layout_constraintTop_toBottomOf="@+id/ivAndroid"/>
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" />
+</MotionScene>
