@@ -4,7 +4,6 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint android:id="@+id/ivCloud" />
-        <Constraint android:id="@+id/ivAndroid" />
         <Constraint
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
@@ -22,6 +21,28 @@
             android:layout_marginBottom="-10dp"
             app:layout_constraintTop_toTopOf="@+id/h_80"
             android:id="@+id/cv" />
+        <Constraint
+            android:id="@+id/ivLeaf1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="60"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_leaf_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/v_40"
+            app:layout_constraintTop_toTopOf="@+id/h_80" />
+        <Constraint
+            android:id="@+id/ivLeaf2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="60"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/h_80"
+            app:layout_constraintDimensionRatio="1:2" />
+
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -39,6 +60,7 @@
             android:scaleType="fitXY"
             app:layout_constraintDimensionRatio="2:2"
             app:layout_constraintTop_toTopOf="@+id/h_20"
+            app:layout_constraintBottom_toBottomOf="@+id/h_40"
             app:layout_constraintStart_toStartOf="@+id/v_40"
             app:layout_constraintEnd_toEndOf="@+id/v_90"/>
         <Constraint
@@ -49,6 +71,29 @@
             app:layout_constraintStart_toStartOf="@+id/v_10"
             android:id="@+id/cv"
             app:layout_constraintTop_toBottomOf="@+id/ivAndroid"/>
+        <Constraint
+            android:id="@+id/ivLeaf1"
+            app:layout_constraintEnd_toEndOf="@+id/v_40"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:rotation="0"
+            android:scaleType="fitStart"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintBottom_toBottomOf="@+id/h_50"
+            app:layout_constraintTop_toTopOf="@+id/cv"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/ivLeaf2"
+            android:layout_width="0dp"
+            app:layout_constraintDimensionRatio="2:2"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:rotation=".60"
+            android:src="@drawable/ic_leaf_2"
+            app:layout_constraintTop_toTopOf="@+id/cv"
+            app:layout_constraintBottom_toBottomOf="@+id/h_50"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </ConstraintSet>
 
     <Transition
