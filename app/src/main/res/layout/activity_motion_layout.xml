@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_blue"
-    tools:context=".MotionLayoutActivity"
-    app:layoutDescription="@xml/activity_motion_layout_scene">
-    <include layout="@layout/layout_common"/>
+    app:layoutDescription="@xml/activity_motion_layout_scene"
+    tools:context=".MotionLayoutActivity">
+
+    <include layout="@layout/layout_common" />
 
     <ImageView
         android:id="@+id/ivCloud"
@@ -43,6 +43,29 @@
         app:layout_constraintStart_toStartOf="@+id/v_10"
         app:layout_constraintTop_toTopOf="@+id/h_80">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:text="Hello! There"
+                android:textFontWeight="600"
+                android:textSize="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="casual"
+                android:text="You are beautiful"
+                android:textSize="25dp" />
+        </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 
@@ -50,24 +73,51 @@
         android:id="@+id/ivLeaf1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:rotation="60"
         android:scaleType="fitStart"
         android:src="@drawable/ic_leaf_1"
+        android:rotation="70"
+        android:translationX="-18dp"
+        android:translationY="18dp"
+        tools:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/v_40"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h_80" />
 
     <ImageView
-        android:layout_width="0dp"
-        app:layout_constraintDimensionRatio="1:2"
-        android:layout_height="0dp"
         android:id="@+id/ivLeaf2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_leaf_2"
-        app:layout_constraintTop_toTopOf="@+id/h_80"
+        android:src="@drawable/ic_leaf_3"
+        android:rotation="-76"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h_80" />
+
+    <ImageView
+        android:id="@+id/ivLeaf3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:rotationX="90"
+        android:src="@drawable/ic_leaf_4"
+        app:layout_constraintDimensionRatio="2:2"
+        app:layout_constraintEnd_toEndOf="@+id/v_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h_60" />
+
+    <ImageView
+        android:id="@+id/ivLeaf4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_leaf_4"
+        android:translationX="30dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/v_60"
+        app:layout_constraintTop_toTopOf="@+id/h_60" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
