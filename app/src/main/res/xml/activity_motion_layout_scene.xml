@@ -61,12 +61,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility="gone"
             android:translationX="30dp"
             android:alpha="0"
             app:layout_constraintTop_toTopOf="@+id/h_60"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toStartOf="@+id/v_60" />
+            app:layout_constraintStart_toStartOf="@+id/v_60" >
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1.0" />
+        </Constraint>
 
     </ConstraintSet>
 
@@ -76,7 +79,7 @@
             app:layout_constraintDimensionRatio="2:2"
             app:layout_constraintStart_toStartOf="@+id/v_10"
             app:layout_constraintEnd_toEndOf="@+id/v_40"
-            app:layout_constraintTop_toTopOf="@+id/h_10"/>
+            app:layout_constraintTop_toTopOf="@+id/h_05"/>
         <Constraint
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -84,7 +87,7 @@
             android:src="@drawable/ic_android"
             android:scaleType="fitXY"
             app:layout_constraintDimensionRatio="2:2"
-            app:layout_constraintTop_toTopOf="@+id/h_20"
+            app:layout_constraintTop_toTopOf="@+id/h_15"
             app:layout_constraintBottom_toBottomOf="@+id/h_40"
             app:layout_constraintStart_toStartOf="@+id/v_40"
             app:layout_constraintEnd_toEndOf="@+id/v_90"/>
@@ -92,7 +95,7 @@
             app:layout_constraintEnd_toEndOf="@+id/v_90"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/h_90"
             app:layout_constraintStart_toStartOf="@+id/v_10"
             android:id="@+id/cv"
             app:layout_constraintTop_toBottomOf="@+id/ivAndroid"/>
@@ -137,10 +140,14 @@
             android:layout_height="0dp"
             android:translationX="30dp"
             android:rotation="50"
-            android:alpha=".100"
             app:layout_constraintTop_toTopOf="@+id/h_40"
             app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toStartOf="@+id/v_60" />
+            app:layout_constraintStart_toStartOf="@+id/v_60" >
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1.0" />
+            <Motion motion:motionStagger="2" />
+        </Constraint>
 
     </ConstraintSet>
 
@@ -150,6 +157,21 @@
         motion:duration="1000"
         motion:autoTransition="animateToEnd" >
         <KeyFrameSet>
+            <KeyAttribute
+                motion:framePosition="0"
+                motion:motionTarget="@id/view">
+                <CustomAttribute
+                    motion:attributeName="alpha"
+                    motion:customFloatValue="1" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                motion:framePosition="50"
+                motion:motionTarget="@id/view">
+                <CustomAttribute
+                    motion:attributeName="alpha"
+                    motion:customFloatValue="0" />
+            </KeyAttribute>
             <KeyPosition
                 motion:framePosition="50"
                 motion:keyPositionType="parentRelative"
@@ -222,5 +244,7 @@
                 motion:framePosition="80"
                 motion:motionTarget="@+id/tvMessage" />
         </KeyFrameSet>
+        <OnSwipe />
+
     </Transition>
 </MotionScene>
