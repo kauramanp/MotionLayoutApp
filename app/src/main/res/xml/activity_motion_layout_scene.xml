@@ -157,21 +157,6 @@
         motion:duration="1000"
         motion:autoTransition="animateToEnd" >
         <KeyFrameSet>
-            <KeyAttribute
-                motion:framePosition="0"
-                motion:motionTarget="@id/view">
-                <CustomAttribute
-                    motion:attributeName="alpha"
-                    motion:customFloatValue="1" />
-            </KeyAttribute>
-
-            <KeyAttribute
-                motion:framePosition="50"
-                motion:motionTarget="@id/view">
-                <CustomAttribute
-                    motion:attributeName="alpha"
-                    motion:customFloatValue="0" />
-            </KeyAttribute>
             <KeyPosition
                 motion:framePosition="50"
                 motion:keyPositionType="parentRelative"
